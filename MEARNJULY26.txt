@@ -838,11 +838,13 @@ Arrays - it is a collection of multiple values stored in a single variable, each
       - Component Composition : Pass components instead of data when possible 
 
 22. REDUX
+
    - Redux is a state management library used to manage and centralize application state, especially in large react applications
     - Core Concepts
+
       1.Store : A single source of truth that holds the entire app state
       2.Action : An object that describes what happened
-      3.Reducer : A fucntion that decides how data changes
+      3.Reducer : A function that decides how data changes
       4.Dispatch : Used to send actions to the Reducer
 
    - Workflow : User Action --> Dispatch --> Reducer --> Store Update --> UI RE-render
@@ -850,8 +852,12 @@ Arrays - it is a collection of multiple values stored in a single variable, each
 - Packages need to install to use Redux in react app 
     1. React-Redux - Official react bindings for redux - npm install @reduxjs/toolkit
           - Provider : makes the redux store available to all components to your app
+          - useSelector Hook : used to select reducer from store to component
+          - useDispatch : used to Dispatch action from component, it returns a function, it can be used to dispatch action
     2. Redux Toolkit (RTK) - Toolset for efficient redux development - npm install react-redux
-
-
+          - configureStore() - used to create store
+          - createReducer() - used to create reducer, update state will be stored in reducer
+          - createAction() - used to generate action, logic to update state value
+          - createSlice() - used to combine action anbd its reducer together
 
 
